@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: pnum
+# key: pnum
+# --
+
+void print_binary(int n){
+  if(n > 1)
+    print_binary(n/2);
+
+  printf("%d", n % 2);
+}
+
+void pnum(int *n){
+  printf("value %d:\t oct: %o \t Hex: %X \t Bin: ", *n, *n, *n);
+  print_binary(*n);
+  printf("\n");
+  printf("address: %d \t hex: %p \t", n, n);
+  printf("\n\n");
+}

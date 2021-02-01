@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name:pythagoras
+# key:pythagoras
+# --
+auto pythagoras_hypotenuse = [](auto side_a, auto side_b) {return sqrt(pow(side_a, 2) + pow(side_b, 2));};
+
+auto pythagoras_base = [](auto hypotenuse, auto side_b){return sqrt(pow(hypotenuse, 2) - pow(side_b, 2));};

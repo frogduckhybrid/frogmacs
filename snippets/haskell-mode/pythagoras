@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name:pythagoras
+# key:pythagoras
+# --
+pythagoras_hypotenuse side_a side_b = sqrt (side_a^2 + side_b^2)
+
+pythagoras_base hypotenuse side_b = sqrt (side_a^2 - side_b^2)

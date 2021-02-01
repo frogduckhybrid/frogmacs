@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:is_even
+# key:is_even
+# --
+auto is_even = [](int x){return x % 2 == 0;};

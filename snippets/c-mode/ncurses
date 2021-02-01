@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: ncurses
+# key: ncurses
+# --
+//Library Directives
+#include <curses.h>
+#include <stdlib.h>
+
+//Project Directives
+
+//Main Function
+int main(int argc, char** argv){
+    initscr();     
+    cbreak(); // makes ctrl+c exit program
+    raw(); //all inputs are raw input
+    noecho(); //user input is not echoed to the screen
+    start_color();
+              
+    getch();
+    endwin();
+    return EXIT_SUCCESS;
+}

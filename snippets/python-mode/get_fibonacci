@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:get_fibonacci
+# key:get_fibonacci
+# --
+get_fibonacci = lambda x: x if x <= 1 else get_fibonacci(x-1) + get_fibonacci(x-2)

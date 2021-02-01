@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: closure
+# key: closure
+# --
+auto adder = [](auto out_val){ return[out_val](auto in_val){ std::cout << out_val + in_val << "\n";};};

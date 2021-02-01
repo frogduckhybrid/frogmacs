@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: triangular 
+# key: triangular
+# --
+
+bool is_triangular(int n){
+  int sum = 0;
+
+  for(int i = 0; i < n; i++){
+    sum += i;
+    if(sum == n)
+      return true;
+  }
+  return false;
+}
+
+auto get_triangular = [](int n){return (n * (n+1))/2;};

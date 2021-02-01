@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: qsort
+# key: qsort
+# --
+
+qsort(array, 13, sizeof(int), compare);

@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: diagnostics
+# key: diagnostics
+# --
+
+//System diagnostics
+foreach(string drive in Environment.GetLogicalDrives())
+               Console.WriteLine("Drive: {0}", drive);
+
+Console.WriteLine("OS: {0}", Environment.OSVersion);
+Console.WriteLine("Processor Count: {0}", Environment.ProcessorCount);
+Console.WriteLine(".NET version: {0}", Environment.Version);
+Console.WriteLine("Is 64 bit OS: {0}", Environment.Is64BitOperatingSystem);
+Console.WriteLine("Machine Name: {0}", Environment.MachineName);
+Console.WriteLine("Username: {0}", Environment.UserName);
+Console.WriteLine("System Directory: {0}", Environment.SystemDirectory);

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:get_fibonacci
+# key:get_fibonacci
+# --
+std::function<int(int)> get_fibonacci = [](int x){ return x <= 1 ? x : get_fibonacci(x-1) + get_fibonacci(x-2);};

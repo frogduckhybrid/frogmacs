@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name:in_range
+# key:in_range
+# --
+bool in_range(int min, int max, int x){
+  return x >= min && x <= max;
+}

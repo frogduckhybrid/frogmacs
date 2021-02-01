@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: closure
+# key: closure
+# --
+const adder = x => y => x + y

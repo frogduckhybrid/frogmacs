@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:in_range
+# key:in_range
+# --
+auto in_range = [](auto min, auto max, auto x){ return x >= min && x <= max;};

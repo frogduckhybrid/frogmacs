@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name:area_circle
+# key:area_circle
+# --
+double area_circle(double radius){
+  return M_PI * pow(radius,2);
+}

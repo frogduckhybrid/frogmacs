@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: fi 
+# key: fi
+# --
+(browse-url-firefox "$1")

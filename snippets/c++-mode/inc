@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: inc
+# key: inc
+# --
+//Library Directives
+#include <iostream>
+#include <string>
+#include <vector>
+#include <functional>
+#include <algorithm>
+#include <memory>
+#include <sys/sysinfo.h>
+
+//Project Directives
+
+$0

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: for
+# key: for
+# --
+for i in range(len(ls)):

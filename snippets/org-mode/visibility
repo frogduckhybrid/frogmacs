@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: visability
+# key: visability
+# --
+# choose one
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: showeverything

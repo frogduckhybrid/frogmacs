@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: const
+# key: const
+# --
+(defconst c 4)

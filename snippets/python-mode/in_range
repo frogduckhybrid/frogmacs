@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:in_range
+# key:in_range
+# --
+in_range = lambda min, max, x: x in range(min, max)

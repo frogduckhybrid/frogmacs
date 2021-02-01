@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: closure
+# key: closure
+# --
+(defn adder [x]
+(fn [y] (println (+ x y))))
+
+(def add7 (adder 7))

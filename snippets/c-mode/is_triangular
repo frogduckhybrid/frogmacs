@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name:is_triangular
+# key:is_triangular
+# --
+bool is_triangular(int n){
+  int sum = 0;
+
+  for(int i = 0; i < n; i++){
+    sum += i;
+    if(sum == n)
+      return true;
+  }
+  return false;
+}

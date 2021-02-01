@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name:area_triangle
+# key:area_triangle
+# --
+double area_triangle(double base, double height){
+    return 0.5 * base * height;
+}

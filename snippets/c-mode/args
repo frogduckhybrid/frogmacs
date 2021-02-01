@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: args
+# key: args
+# --
+//Print Command Line Arguments
+for(int i = 0; i < argc; i++){
+        printf("Arg %d: %s\n", i, argv[i]);
+}

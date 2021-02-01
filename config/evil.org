@@ -1,0 +1,39 @@
+After making the switch to the dark side, I can't go back to default bindings.
+Here it is in it's own section to easily comment out if needed.
+* Evil Mode
+** Evil
+
+Because you like your fingers.
+VIM keybindings are dank, no point cutting off the nose to spite the face.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package evil
+    :init
+    (setq evil-want-integration t)
+    (setq evil-want-keybinding nil)
+    (setq evil-want-C-u-scroll t)
+    (setq evil-want-C-i-jump nil)
+    :config
+    (evil-mode 1)
+    (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+    (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
+
+    ;; Use visual line motions even outside of visual-line-mode buffers
+    (evil-global-set-key 'motion "j" 'evil-next-visual-line)
+    (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
+
+    (evil-set-initial-state 'messages-buffer-mode 'normal)
+    (evil-set-initial-state 'dashboard-mode 'normal))
+#+END_SRC
+
+** Evil Collection
+https://github.com/emacs-evil/evil-collection
+
+Get EVIL key bindings in places you never though possible!
+
+#+BEGIN_SRC emacs-lisp
+  (use-package evil-collection
+    :after evil
+    :config
+    (evil-collection-init))
+#+END_SRC

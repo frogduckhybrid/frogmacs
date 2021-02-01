@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: inc
+# key: inc
+# --
+//Library Directives
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
+#include <sys/sysinfo.h>
+
+//Project Directives
+
+$0

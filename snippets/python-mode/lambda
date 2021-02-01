@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: lambda
+# key: lambda
+# --
+add5 = lambda x: x+ 5

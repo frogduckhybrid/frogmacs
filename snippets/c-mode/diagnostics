@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: diagnostics
+# key: diagnostics
+# --
+//Print System Diagnostics
+printf("Processors configured: %d\n", get_nprocs_conf());
+printf("Processors available: %d\n", get_nprocs());
+printf("Physical pages: %d \n", get_phys_pages());
+printf("Available physical pages: %d \n", get_avphys_pages());

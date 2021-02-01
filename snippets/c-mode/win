@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: win
+# key: win
+# --
+//h, w y, x
+WINDOW *win = newwin(10,50,3,3);
+refresh();

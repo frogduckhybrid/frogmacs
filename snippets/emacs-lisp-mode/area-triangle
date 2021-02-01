@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name:area-triangle
+# key:area-triangle
+# --
+(defun area-triangle(base height)
+  (* 0.5 base height))

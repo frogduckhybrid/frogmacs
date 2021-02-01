@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: for
+# key: for
+# --
+(dotimes (i 10)
+         ($0))

@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: diagnostics
+# key: diagnostics
+# --
+
+void diagnostics(){
+ const double megabyte = 1024 * 1024;
+
+ struct sysinfo si;
+ sysinfo (&si);
+
+ std::cout << "total ram = " << si.totalram / megabyte << "MB \n";
+ std::cout << "free ram = " << si.freeram / megabyte << "MB \n\n";
+
+ std::cout << "total swap space = " << si.totalswap / megabyte << "MB \n";
+ std::cout << "free swap space = " << si.freeswap / megabyte << "MB \n\n";
+
+ std::cout << "total current processes = " << si.procs << "\n\n";
+
+ std::cout << "SQLite3 version " << SQLITE_VERSION << "\n";
+}

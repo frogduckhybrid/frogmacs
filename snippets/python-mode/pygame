@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: pygame 
+# key: pygame 
+# --
+import pygame
+pygame.init()
+win = pygame.display.set_mode((500,500))
+
+# Title And Icon
+pygame.display.set_caption("Game");
+
+# Game Loop
+game_exit = False
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            game_exit = True
+        
+
+    win.fill((255,0,0))
+    pygame.display.update()

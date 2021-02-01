@@ -1,0 +1,54 @@
+These settings just change how Emacs looks (not feels)
+
+* Visuals
+** Doom modeline
+#+BEGIN_SRC emacs-lisp
+  (use-package all-the-icons)
+
+  (use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :custom ((doom-modeline-height 13)))
+#+END_SRC
+** Doom Theme
+#+BEGIN_SRC emacs-lisp
+  (use-package doom-themes)
+  (load-theme 'doom-acario-dark t) ;;Dark theme
+#+END_SRC
+** prettify-symbols
+#+BEGIN_SRC emacs-lisp
+  (global-prettify-symbols-mode +1)
+  (defconst lisp--prettify-symbols-alist
+    '(("lambda"  . ?λ)
+      (">=" . ?≥)
+      ))
+
+  (defun add-symbols (mode)
+    (add-hook mode (lambda ()
+                     (push '("->" .  "➡") prettify-symbols-alist)
+                     (push '("=>" .  "⇒") prettify-symbols-alist)
+                     (push '("M_PI" . "π") prettify-symbols-alist)
+                     (push '("return" . "⏎ ") prettify-symbols-alist)
+                     (push '(">=" . "≥") prettify-symbols-alist)
+                     (push '("<=" . "≤") prettify-symbols-alist)
+                     (push '("!=" . "≠") prettify-symbols-alist)
+                     (push '("&&" . "∧") prettify-symbols-alist)
+                     (push '("||" . "∨") prettify-symbols-alist)
+                     (prettify-symbols-mode))))
+
+  (add-symbols 'c-mode-hook)
+  (add-symbols 'c++-mode-hook)
+#+END_SRC
+** rainbow-delimiters
+#+BEGIN_SRC emacs-lisp
+(use-package rainbow-delimiters
+:hook (prog-mode . rainbow-delimiters-mode))
+#+END_SRC
+** Org Bullets
+#+BEGIN_SRC emacs-lisp
+  (use-package org-bullets
+    :after org
+    :hook (org-mode . org-bullets-mode)
+    :custom
+    (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+#+END_SRC

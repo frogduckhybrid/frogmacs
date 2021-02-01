@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name:is_even
+# key:is_even
+# --
+is_even :: Integer -> Bool
+is_even x = even x

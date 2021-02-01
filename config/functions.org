@@ -1,0 +1,57 @@
+My simple lisp functions.
+* Navigation
+#+BEGIN_SRC emacs-lisp
+  (defun home ()
+    (interactive)
+    (find-file "~/projects/org/home.org"))
+
+  (defun links ()
+    (interactive)
+    (find-file "~/projects/org/links.org"))
+
+  (defun notes ()
+    (interactive)
+    (find-file "~/projects/org/notes.org"))
+#+END_SRC
+* Snippet shortcuts
+#+BEGIN_SRC emacs-lisp
+    (defun show-snips (mode-name)
+      (move-beginning-of-line 1)
+      (kill-line)
+      (insert(shell-command-to-string (concat "ls ~/.emacs.d/snippets/" mode-name "-mode/"))))
+
+    (defun csnips () (show-snips "c"))
+    (defun cppsnips () (show-snips "c++"))
+    (defun clojuresnips () (show-snips "clojure"))
+    (defun csharpsnips () (show-snips "csharp"))
+    (defun elispsnips () (show-snips "emacs-lisp"))
+    (defun eshellsnips () (show-snips "eshell"))
+    (defun haskellsnips () (show-snips "haskell"))
+    (defun makesnips () (show-snips "makefile-gmake"))
+    (defun orgsnips () (show-snips "org"))
+    (defun pysnips () (show-snips "python"))
+    (defun websnips () (show-snips "web"))
+#+END_SRC
+
+* Allow movement in russian
+#+BEGIN_SRC emacs-lisp
+  (define-key function-key-map [?\C-ч] [?\C-x])
+  (define-key function-key-map [?\C-у] [?\C-e])
+  (define-key function-key-map [?\C-п] [?\C-g])
+  (define-key function-key-map [?\C-р] [?\h])
+  (define-key function-key-map [?\C-о] [?\j])
+  (define-key function-key-map [?\C-л] [?\k])
+  (define-key function-key-map [?\C-д] [?\l])
+  (define-key function-key-map [?\C-ш] [?\i])
+  (define-key function-key-map [?\C-ф] [?\a])
+  (define-key function-key-map [?\C-ц] [?\w])
+  (define-key function-key-map [?\C-д] [?\b])
+#+END_SRC
+* Hyper Functions
+This functions use the Hyper key. I've done this by setting
+control to hyper and capslock to control using Gnome Tweaks
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "H-h") 'home)
+  (global-set-key (kbd "H-l") 'links)
+  (global-set-key (kbd "H-n") 'notes)
+#+END_SRC

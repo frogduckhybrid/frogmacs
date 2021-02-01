@@ -1,0 +1,72 @@
+|----------|
+| Frogmacs |
+|----------|
+Welcome to Frogmacs config file. Here you will Find mostly use-package configurations.
+You can find startup config in
+
+(find-file "better-defaults.org")
+
+Special Thanks to David Wilson (browse-url-firefox "https://github.com/daviwil")
+
+# WARNING
+WARNING: This is being separated into other files currently and is not used.
+
+* Startup
+** Reduce garbage collection
+#+BEGIN_SRC emacs-lisp
+    ;; The default is 800 kilobytes.  Measured in bytes.
+    (setq gc-cons-threshold (* 50 1000 1000))
+
+    ;; Profile emacs startup
+    (add-hook 'emacs-startup-hook
+              (lambda ()
+                (message "*** Emacs loaded in %s with %d garbage collections."
+                         (format "%.2f seconds"
+                                 (float-time
+                                  (time-subtract after-init-time before-init-time)))
+                         gcs-done)))
+#+END_SRC
+* Which Key
+#+BEGIN_SRC emacs-lisp
+  (use-package which-key
+    :init (which-key-mode)
+    :diminish which-key-mode
+    :config
+    (setq which-key-idle-delay 0.5))
+#+END_SRC
+
+* Helpful
+#+BEGIN_SRC emacs-lisp
+  (use-package helpful
+    :custom
+    (counsel-describe-function-function #'helpful-callable)
+    (counsel-describe-variable-function #'helpful-variable)
+    :bind
+    ([remap describe-function] . counsel-describe-function)
+    ([remap describe-command] . helpful-command)
+    ([remap describe-variable] . counsel-describe-variable)
+    ([remap describe-key] . helpful-key))
+#+END_SRC
+* LSP MODE
+#+BEGIN_SRC emacs-lisp
+(defun efs/lsp-mode-setup ()
+  (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
+  (lsp-headerline-breadcrumb-mode))
+
+(use-package lsp-mode
+  :commands (lsp lsp-deferred)
+  :hook (lsp-mode . efs/lsp-mode-setup)
+  :init
+  (setq lsp-keymap-prefix "C-c l")  ;; Or 'C-l', 's-l'
+  :config
+  (lsp-enable-which-key-integration t))
+#+END_SRC
+
+lsp-ui
+
+* Company-mode
+#+BEGIN_SRC emacs-lisp
+  (use-package company
+  :config
+  (add-hook 'after-init-hook 'global-company-mode))
+#+END_SRC

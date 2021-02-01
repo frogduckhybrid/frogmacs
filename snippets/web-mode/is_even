@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:is_even
+# key:is_even
+# --
+const is_even = x => x % 2 == 0

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name:in-range
+# key:in-range
+# --
+(defun in-range (min max x)
+  (and (>= x min) (<= x max))

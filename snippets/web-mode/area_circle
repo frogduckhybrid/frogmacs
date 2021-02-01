@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:area_circle
+# key:area_circle
+# --
+const area_circle = radius => Math.PI * Math.pow(radius, 2)

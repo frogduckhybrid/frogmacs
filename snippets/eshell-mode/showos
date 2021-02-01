@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: showos
+# key: showos
+# --
+uname -a

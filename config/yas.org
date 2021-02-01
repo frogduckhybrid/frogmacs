@@ -1,0 +1,10 @@
+Yasnippet
+
+* Yasnippet
+#+BEGIN_SRC emacs-lisp
+  (use-package yasnippet
+  :diminish yas-global-mode
+  :config
+  (yas-global-mode 1)
+  (yas-load-directory "~/.emacs.d/snippets/"))
+#+END_SRC

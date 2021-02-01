@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name:distance_between_points
+# key:distance_between_points
+# --
+
+double pythagoras_hypotenuse(double side_a, double side_b){
+  return sqrt(pow(side_a, 2) + pow(side_b, 2));
+}
+
+double distance_between_points(double x1, double y1, double x2, double y2){
+  pythagoras_hypotenuse(x2-x1, y2-y1);
+}

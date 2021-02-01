@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:get_triangular
+# key:get_triangular
+# --
+get_triangular = lambda x : x * (x+1) / 2

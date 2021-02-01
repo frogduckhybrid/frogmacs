@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:get_fibonacci
+# key:get_fibonacci
+# --
+const get_fibonacci = x => x <= 1 ? x : get_fibonacci(x-1) + get_fibonacci(x-2)

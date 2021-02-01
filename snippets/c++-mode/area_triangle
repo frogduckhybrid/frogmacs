@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:area_triangle
+# key:area_triangle
+# --
+auto area_triangle = [](auto base, auto height) {return 0.5 * base * height; };

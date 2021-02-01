@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name:pythagoras
+# key:pythagoras
+# --
+(defun pythagoras-hypotenuse (side-a side-b)
+  (sqrt ( + (expt side_a 2) (expt side-b 2))))
+
+(defun pythagoras-base (hypotenuse side-a)
+  (sqrt (- (expt hypotenuse 2) (expt side-a 2))))

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name:is-even
+# key:is-even
+# --
+(defun is-even (x)
+  (= (% x 2) 0))

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name:get-fibonacci
+# key:get-fibonacci
+# --
+(defun get-fibonacci (x)
+  (if (<= x 1)
+      x
+    (+ (get-fibonacci(- x 1)) (get-fibonacci(- x 2)))))

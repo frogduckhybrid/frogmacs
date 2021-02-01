@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name:get_triangular
+# key:get_triangular
+# --
+int get_triangular(int n){
+  return n * (n+1) / 2;
+}

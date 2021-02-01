@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:area_circle
+# key:area_circle
+# --
+area_circle radius = pi * radius^2

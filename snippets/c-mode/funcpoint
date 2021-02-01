@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: funcpoint
+# key: funcpoint
+# --
+
+void basic_func(const char* msg){ printf("Hello, %s, \n", msg);}
+void (*fun_ptr)(const char*) = &basic_func;

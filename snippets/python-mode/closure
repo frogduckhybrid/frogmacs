@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: closure
+# key: closure
+# --
+adder = lambda x: lambda y: x + y
