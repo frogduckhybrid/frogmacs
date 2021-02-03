@@ -64,6 +64,9 @@ eshell-mode-hook treemacs-mode-hook))
 #+END_SRC
 * Better Startup Defaults
 #+BEGIN_SRC emacs-lisp
+    ;;disable backups
+  (setq make-backup-files nil)
+
   ;;disable start screen
   (setq inhibit-splash-screen t inhibit-startup-echo-area-message t)
 
