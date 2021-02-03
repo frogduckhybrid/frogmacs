@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name:vars
-# key:vars
-# --
-// Integer Types
-char 255;
