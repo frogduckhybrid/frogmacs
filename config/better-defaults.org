@@ -38,6 +38,9 @@ this basic setup. This is stuff I feel I will always want
  ;;display linums down the side of buffer (Line number redundancy)
 (global-display-line-numbers-mode t)
 
+;;Highlight current line
+(global-hl-line-mode +1)
+
 ;;Disable line numbers in terminal and places it's not needed
 (dolist (mode '(term-mode-hook
 shell-mode-hook
