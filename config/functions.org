@@ -12,6 +12,10 @@ My simple lisp functions.
   (defun notes ()
     (interactive)
     (find-file "~/projects/org/notes.org"))
+
+(defun misc ()
+(interactive)
+(find-file "~/projects/org/misc.org"))
 #+END_SRC
 * Snippet shortcuts
 #+BEGIN_SRC emacs-lisp
@@ -54,4 +58,5 @@ control to hyper and capslock to control using Gnome Tweaks
   (global-set-key (kbd "H-h") 'home)
   (global-set-key (kbd "H-l") 'links)
   (global-set-key (kbd "H-n") 'notes)
+  (global-set-key (kbd "H-m") 'misc)
 #+END_SRC
